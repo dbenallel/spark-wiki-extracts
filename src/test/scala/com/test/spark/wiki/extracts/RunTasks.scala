@@ -9,7 +9,7 @@ class RunTasks extends FunSuite with BeforeAndAfterEach {
   override protected def beforeEach(): Unit = {
     SparkSession.builder()
       .config("spark.ui.showConsoleProgress", "false")
-      .master("local[*]")
+      .master("local[1]")
       .getOrCreate()
   }
 

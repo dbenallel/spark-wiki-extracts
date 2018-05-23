@@ -19,8 +19,14 @@
 	</properties>
 
 	<build>
-		<plugins>
-			<plugin>
+    <sourceDirectory>src/main/scala</sourceDirectory>
+    <testSourceDirectory>src/test/scala</testSourceDirectory>
+    <plugins>
+      <plugin>
+        <groupId>org.scala-tools</groupId>
+        <artifactId>maven-scala-plugin</artifactId>
+      </plugin>
+      <plugin>
 				<groupId>com.google.code.sbt-compiler-maven-plugin</groupId>
 				<artifactId>sbt-compiler-maven-plugin</artifactId>
 				<version>1.0.0</version>

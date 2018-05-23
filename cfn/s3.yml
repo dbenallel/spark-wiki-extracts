@@ -1,3 +1,13 @@
----
 AWSTemplateFormatVersion: 2010-09-09
 Resources:
+ S3BBucket:
+  Type: 'AWS::S3::Bucket'
+  Properties:
+    BucketName: b
+    AccessControl: LogDeliveryWrite
+ S3ABucket:
+  Type: 'AWS::S3::Bucket'
+  Properties:
+    BucketName: a
+    LoggingConfiguration:
+      DestinationBucketName: b
